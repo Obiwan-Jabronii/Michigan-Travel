@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const postSchema = require('./Post');
 
 const locationSchema = new Schema (
     {
@@ -13,7 +14,8 @@ const locationSchema = new Schema (
         image: {
             type: String,
             required: true
-        }
+        },
+        posts: [postSchema]
     });
 
 const Location = model('Location', locationSchema);
