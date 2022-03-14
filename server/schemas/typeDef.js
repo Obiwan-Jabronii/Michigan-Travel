@@ -22,7 +22,10 @@ const typeDefs = gql`
     }
     type Mutation {
         login(email: String!, password: String!): Auth
-        addUser(username: String!, email: String, password: String)
+        addUser(username: String!, email: String, password: String): Auth
+        saveLocation(region: String!, description: String!, image: String!, locationId: String! ): User
+        saveComment(user: String!, commentId: String!)
+
         
     }
     type Auth {
