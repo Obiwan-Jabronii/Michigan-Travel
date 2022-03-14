@@ -16,13 +16,22 @@ const typeDefs = gql`
         locationId: String
         region: [Region]
     }
+    {
+        type Post {
+            postId: String 
+            username: User.username 
+        }
+    }
     type Comment {
         commentId: String
         user: [User]
     }
     type Mutation {
         login(email: String!, password: String!): Auth
-        addUser(username: String!, email: String, password: String)
+        addUser(username: String!, email: String, password: String): Auth
+        saveLocation(region: String!, description: String!, image: String!, locationId: String! ): User
+        saveComment(user: String!, commentId: String!)
+
         
     }
     type Auth {
