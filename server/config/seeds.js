@@ -1,5 +1,7 @@
 const db = require('./connection');
 const { User, Post, Location, Comment } = require('../models');
+
+
 db.once('open', async () => {
     const location = await Location.insertMany([
         {

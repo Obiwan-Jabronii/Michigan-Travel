@@ -16,6 +16,12 @@ const typeDefs = gql`
         locationId: String
         region: [Region]
     }
+    {
+        type Post {
+            postId: String 
+            username: User.username 
+        }
+    }
     type Comment {
         commentId: String
         user: [User]
