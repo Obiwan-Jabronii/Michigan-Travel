@@ -15,7 +15,7 @@ const locationSchema = new Schema (
             type: String,
             required: true
         },
-        posts: [postSchema]
+        // posts: [postSchema]
     });
 
 const Location = model('Location', locationSchema);

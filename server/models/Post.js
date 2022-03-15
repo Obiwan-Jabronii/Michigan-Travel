@@ -18,7 +18,7 @@ const postSchema = new Schema(
             default: Date.now,
             get: createdAtVal => date(createdAtVal)
         },
-        comments: [commentSchema]
+        // comments: [commentSchema]
 });
 
 const Post = model('Post', postSchema);
