@@ -13,26 +13,29 @@ const typeDefs = gql`
         savedComments: [Comment]
     }
     type Location {
-        locationId: String
-        region: [Region]
+        _id: ID
+        postId: [Post]
+        commentId: [Comment]
     }
-    {
-        type Post {
-            postId: String 
-            username: User.username 
-        }
+    type Post {
+        _id: ID
+        postText: String
+        createdAt: String
+        locationId: [Location]
+        userId: [User]
     }
     type Comment {
-        commentId: String
-        user: [User]
+        _id: ID
+        commentText: String
+        createdAt: String
+        postId: [Post]
+        userId: [User]
     }
     type Mutation {
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String, password: String): Auth
         saveLocation(region: String!, description: String!, image: String!, locationId: String! ): User
-        saveComment(user: String!, commentId: String!)
-
-        
+        saveComment(user: String!, commentId: String!)    
     }
     type Auth {
         token: ID!
