@@ -28,7 +28,7 @@ const resolver = {
                 throw new AuthenticationError('Password or username is incorrect. Please try again.')
             }
 
-            const correctPass = await user. isCorrectPassword(password);
+            const correctPass = await user.isCorrectPassword(password);
 
             if(!correctPass) {
                 throw new AuthenticationError('Password or username is incorrect. Please try again.')
