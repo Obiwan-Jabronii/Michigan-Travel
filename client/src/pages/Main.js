@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
 
+
 const HomePage = () => {
     const cardInfo = [
         { image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.takethetruck.com%2Fblog%2Fthings-to-do-in-the-upper-peninsula&psig=AOvVaw1otFbuXhHbmym1EB3m-Aze&ust=1647493746567000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJDh9JXwyfYCFQAAAAAdAAAAABAD",
