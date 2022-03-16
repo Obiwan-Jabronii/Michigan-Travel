@@ -41,7 +41,7 @@ function App() {
       <>
         <Navbar />
           <div className ="conatiner">
-        <Switch>
+        {/* <Switch> */}
           <Route exact path='/north' component={NorthReg} />
           <Route exact path='/south' component={SouthReg} />
           <Route exact path='/upper' component={UpperReg} />
@@ -49,7 +49,7 @@ function App() {
           <Route exact path='/' component={Main} />
           <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
 
-        </Switch>
+        {/* </Switch> */}
         </div>
         <Footer />
       </>
