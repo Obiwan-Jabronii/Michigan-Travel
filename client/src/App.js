@@ -8,7 +8,9 @@ import SouthReg from './pages/SouthReg';
 import UpperReg from './pages/UpperReg';
 import WestReg from './pages/WestReg';
 import Main from './pages/Main';
+
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 import './App.css';
 import './index.css';
@@ -38,6 +40,7 @@ function App() {
     <Router>
       <>
         <Navbar />
+          <div className ="conatiner">
         <Switch>
           <Route exact path='/north' component={NorthReg} />
           <Route exact path='/south' component={SouthReg} />
@@ -45,7 +48,10 @@ function App() {
           <Route exact path='/west' component={WestReg} />
           <Route exact path='/' component={Main} />
           <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
+
         </Switch>
+        </div>
+        <Footer />
       </>
     </Router>
     </ApolloProvider>
