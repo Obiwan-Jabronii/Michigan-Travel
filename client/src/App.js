@@ -1,13 +1,14 @@
 import React from 'react';
- import { BrowserRouter as Router, Route } from 'react-router-dom';
- import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
- import { setContext } from '@apollo/client/link/context';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 
 import NorthReg from './pages/NorthReg';
 import SouthReg from './pages/SouthReg';
 import UpperReg from './pages/UpperReg';
 import WestReg from './pages/WestReg';
 import Main from './pages/Main';
+import Home from './pages/Home';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -41,15 +42,14 @@ function App() {
       <>
         <Navbar />
           <div className ="conatiner">
-        {/* <Switch> */}
+        
           <Route exact path='/north' component={NorthReg} />
           <Route exact path='/south' component={SouthReg} />
           <Route exact path='/upper' component={UpperReg} />
           <Route exact path='/west' component={WestReg} />
+          <Route exact path='/home' component={Home} />
           <Route exact path='/' component={Main} />
           <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
-
-        {/* </Switch> */}
         </div>
         <Footer />
       </>
