@@ -41,7 +41,7 @@ function App() {
     <Router>
       <>
         <Navbar />
-          <div className ="conatiner">
+          <div className ="container">
         
           <Route exact path='/north' component={NorthReg} />
           <Route exact path='/south' component={SouthReg} />
