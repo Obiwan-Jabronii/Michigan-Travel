@@ -12,7 +12,8 @@ import { Container, Card, Row, Col, Image } from 'react-bootstrap';
 function HomePage() {
     return (
 
-            <><div className="flex justify-center text-center text-bold text-3xl">
+        <Container fluid>
+            <div className="flex justify-center text-center text-bold text-3xl">
             <h1>Welcome to Michigan Wanders!</h1>
             <p className="text-center text-3xl">
                 If you're looking to explore all that the great State of Michigan
@@ -21,7 +22,8 @@ function HomePage() {
             <div className='mt-6 text-3xl'>
                 To begin, click on the cards below to explore!
             </div>
-        </div><Container>
+        </div>
+        <Container>
                 <Row>
                     <Col md={6}>
                         <Card style={{ width: '18rem' }} className="mb=3">
@@ -84,8 +86,9 @@ function HomePage() {
                         </Card>
                     </Col>
                 </Row>
-            </Container></>
-          );
+            </Container>
+        </Container>
+        );
 }
 
     export default HomePage;
