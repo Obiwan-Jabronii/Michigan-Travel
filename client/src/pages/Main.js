@@ -41,7 +41,7 @@ const HomePage = () => {
                             {card.text}
                         </Card.Text>
                         <button variant="primary" className="card-btn">
-                        <Link to={}></Link>
+                        {/* <Link to={}></Link> */}
                         </button>
                     </Card.Body>
                 </Card>
