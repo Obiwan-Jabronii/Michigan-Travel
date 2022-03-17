@@ -42,13 +42,13 @@ function App() {
       <>
         <Navbar />
           <div className ="container">
-        
+
+          <Route exact path='/' component={Main} />
           <Route exact path='/north' component={NorthReg} />
           <Route exact path='/south' component={SouthReg} />
           <Route exact path='/upper' component={UpperReg} />
           <Route exact path='/west' component={WestReg} />
           <Route exact path='/home' component={Home} />
-          <Route exact path='/' component={Main} />
           <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
         </div>
         <Footer />
