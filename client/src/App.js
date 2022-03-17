@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
@@ -41,15 +41,13 @@ function App() {
       <>
         <Navbar />
           <div className ="conatiner">
-        <Switch>
+        
           <Route exact path='/north' component={NorthReg} />
           <Route exact path='/south' component={SouthReg} />
           <Route exact path='/upper' component={UpperReg} />
           <Route exact path='/west' component={WestReg} />
           <Route exact path='/' component={Main} />
           <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
-
-        </Switch>
         </div>
         <Footer />
       </>
