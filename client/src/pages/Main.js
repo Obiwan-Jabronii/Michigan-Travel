@@ -1,9 +1,10 @@
 import React from 'react'
+
 import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
 
 
-const HomePage = () => {
+const MainPage = () => {
     const cardInfo = [
         { image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.takethetruck.com%2Fblog%2Fthings-to-do-in-the-upper-peninsula&psig=AOvVaw1otFbuXhHbmym1EB3m-Aze&ust=1647493746567000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJDh9JXwyfYCFQAAAAAdAAAAABAD",
 
@@ -29,7 +30,8 @@ const HomePage = () => {
 
             text: "Click below to checkout the wonders that the East Side of Michigan has to offer!"}
 
-    ];
+        ];
+  
 
     const renderCard = (card, index) => {
         return(
@@ -41,30 +43,23 @@ const HomePage = () => {
                             {card.text}
                         </Card.Text>
                         <button variant="primary" className="card-btn">
-                        <Link to={}></Link>
+                        <Link to={card.Link}></Link>
                         </button>
                     </Card.Body>
                 </Card>
-        )
-    }
+        );
+    };
 
 
     return (
      
-        <><div className="flex justify-center text-center">
-            <h1>Welcome to Michigan Wanders!</h1>
-            <p className="text-center text-bold">
-                If you're looking to explore all that the great State of Michigan
-                has to offer, then look no further!
-            </p>
-        </div><div className="grid">
+       <div className="grid">
             {cardInfo.map(renderCard)}
-            </div></>
-        
+            </div>
     )
 };
 
         
 
-export default HomePage;
+export default MainPage;
 

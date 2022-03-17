@@ -8,6 +8,7 @@ import SouthReg from './pages/SouthReg';
 import UpperReg from './pages/UpperReg';
 import WestReg from './pages/WestReg';
 import Main from './pages/Main';
+import Home from './pages/Home';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -46,6 +47,7 @@ function App() {
           <Route exact path='/south' component={SouthReg} />
           <Route exact path='/upper' component={UpperReg} />
           <Route exact path='/west' component={WestReg} />
+          <Route exact path='/home' component={Home} />
           <Route exact path='/' component={Main} />
           <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
 
