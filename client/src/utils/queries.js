@@ -31,6 +31,7 @@ export const QUERY_ME = gql`
       _id
       username
       email
+      locations
       posts {
         _id
         postText
