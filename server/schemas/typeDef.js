@@ -22,7 +22,6 @@ const typeDefs = gql`
         email: String
         locations: [Location]
         posts: [Post]
-        comments: [Comment]
     }
     type Location {
         _id: ID
@@ -37,19 +36,11 @@ const typeDefs = gql`
         postText: String
         username: String
         createdAt: String
-        comments: [Comment]
-    }
-    type Comment {
-        _id: ID
-        commentText: String
-        createdAt: String
-        username: String
     }
     type Mutation {
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
         addPost(postText: String!): Post
-        addComment(postId: ID!, commentText: String!): Post
         saveLocation( locationId: ID! ): User   
     }
     type Auth {

@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_LOCATIONS } from '../utils/queries';
+import AuthService  from '../utils/auth';
+import PostForm from '../components/PostForm';
+import PostList from '../components/PostList';
+
 
 function SingleLocation() {
     const { id } = useParams();
@@ -32,6 +36,8 @@ function SingleLocation() {
                     <p>
                         {currentLocation.description}
                     </p>
+                    {AuthService.loggedIn() && <PostForm locationId={location._id} />}
+                    {<PostList posts={location.posts} />}
                 </div>
             ): null}
         </>

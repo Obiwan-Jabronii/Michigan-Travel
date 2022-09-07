@@ -9,17 +9,6 @@ export const QUERY_USER = gql`
         _id
         postText
         createdAt
-        comments {
-          _id
-          commentText
-          username
-          createdAt
-        }
-      }
-      comments {
-        _id
-        commentText
-        createdAt
       }
     }
   }
@@ -36,17 +25,6 @@ export const QUERY_ME = gql`
         _id
         postText
         createdAt
-        comments {
-          _id
-          commentText
-          username
-          createdAt
-        }
-      }
-      comments {
-        _id
-        commentText
-        createdAt
       }
     }
   }
@@ -59,12 +37,6 @@ export const QUERY_POSTS = gql`
       postText
       createdAt
       username
-      comments {
-        _id
-        createdAt
-        username
-        commentText
-      }
     }
   }
 `;
@@ -76,12 +48,6 @@ export const QUERY_POST = gql`
       postText
       createdAt
       username
-      comments {
-        _id
-        createdAt
-        username
-        commentText
-      }
     }
   }
 `;
@@ -130,12 +96,6 @@ export const QUERY_LOCATION = gql`
         _id
         username
         postText
-        comments {
-          _id
-          commentText
-          username
-          createdAt
-        }
         createdAt
       }
     }

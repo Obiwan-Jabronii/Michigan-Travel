@@ -37,7 +37,6 @@ const resolver = {
             return User.find()
             .select('-__v -password')
             //.populate('posts')
-            //.populate('comments');
         },
         posts: async (parent, {username}) => {
             const params = username ? { username} : {};
@@ -50,7 +49,6 @@ const resolver = {
             return User.findOne({ username})
             .select('-__v -password')
             //.populate('posts')
-            //.populate('comments')
         }
     },
 
@@ -104,17 +102,6 @@ const resolver = {
             }
 
             throw new AuthenticationError('You must be logged in to post!')
-        },
-        addComment: async (parent, { postId, commentText }, context) => {
-            if (context.user) {
-                const updatePost = await Post.findOneAndUpdate(
-                    {_id: postId},
-                    { $push: {comments: { commentText, username: context.user.username }}},
-                    { new: true }
-                );
-                return updatePost
-            }
-            throw new AuthenticationError('You must be logged in to comment!')
         }
     }
 }
