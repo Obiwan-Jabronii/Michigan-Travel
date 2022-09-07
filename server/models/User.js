@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+const Location = require('./Location');
 
 const userSchema = new Schema (
     {
@@ -17,8 +18,27 @@ const userSchema = new Schema (
         password: {
             type: String,
             require: true,
+        },
+        locations: [Location.schema],
+        posts: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: "Post"
+            }
+        ],
+        comments: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Comment'
+            }
+        ]
+    },
+    {
+        toJSON: {
+            virtuals: true
         }
-});
+    }
+);
 
 userSchema.pre('save', async function (next) {
     if (this.new || this.isModified('password')) {

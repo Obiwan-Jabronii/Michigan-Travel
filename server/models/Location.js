@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
-// const postSchema = require('./Post');
+const postSchema = require('./Post');
+const regionSchema = require('./Region');
 
 const locationSchema = new Schema (
     {
@@ -8,14 +9,17 @@ const locationSchema = new Schema (
             required: true
         },
         description: {
-            type: String,
-            required: true
+            type: String
         },
         image: {
-            type: String,
-            required: true
+            type: String
         },
-        // posts: [postSchema]
+        posts: [postSchema],
+        region: {
+            type: Schema.Types.ObjectId,
+            ref: 'Region',
+            required: true
+        }
     });
 
 const Location = model('Location', locationSchema);

@@ -1,11 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-import mackinawCity from "../assets/images/MackinawCity.jpg";
-import grandHaven from "../assets/images/Grand Haven.jpg";
-import detroit from "../assets/images/Detroit.jpg";
-import traverseCity from "../assets/images/TraverseCity.jpg";
-
 import { Container, Card, Row, Col, Image } from 'react-bootstrap';
 
 
@@ -27,10 +22,10 @@ function HomePage() {
                 <Row>
                     <Col md={6}>
                         <Card style={{ width: '18rem' }} className="mb=3">
-                            <Image src={mackinawCity}
+                            {/* <Image src={mackinawCity}
                                 className="card-img-top"
                                 alt="Mackinaw City"
-                                fluid />
+                                fluid /> */}
                             <Card.Body>
                                 <Card.Title><h3>Upper Peninsula</h3></Card.Title>
                                 <Card.Text>
@@ -42,10 +37,10 @@ function HomePage() {
                     </Col>
                     <Col md={6}>
                         <Card style={{ width: '18rem' }} className="mb=3">
-                            <Image src={grandHaven}
+                            {/* <Image src={grandHaven}
                                 className="card-img-top"
                                 alt="Grand Haven"
-                                fluid />
+                                fluid /> */}
                             <Card.Body>
                                 <Card.Title>West Michigan</Card.Title>
                                 <Card.Text>
@@ -57,10 +52,10 @@ function HomePage() {
                     </Col>
                     <Col md={6}>
                         <Card style={{ width: '18rem' }} className="mb=3">
-                            <Image src={detroit}
+                            {/* <Image src={detroit}
                                 className="card-img-top"
                                 alt="Detroit"
-                                fluid />
+                                fluid /> */}
                             <Card.Body>
                                 <Card.Title> South Michigan</Card.Title>
                                 <Card.Text>
@@ -72,10 +67,10 @@ function HomePage() {
                     </Col>
                     <Col md={6}>
                         <Card style={{ width: '18rem' }} className="mb=3">
-                            <Image src={traverseCity}
+                            {/* <Image src={traverseCity}
                                 className="card-img-top"
                                 alt="Traverse City"
-                                fluid />
+                                fluid /> */}
                             <Card.Body>
                                 <Card.Title>North Michigan</Card.Title>
                                 <Card.Text>

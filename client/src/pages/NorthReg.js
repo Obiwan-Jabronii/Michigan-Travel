@@ -1,21 +1,16 @@
 import React from "react";
 import { Container, Card, Row, Col, Image } from 'react-bootstrap';
 
-import beaverIsland from "../assets/images/BeaverIsland.jpg";
-import petosky from "../assets/images/Petosky.jpg";
-import traverseCity from "../assets/images/TraverseCity.jpg";
-import manistee from "../assets/images/Manistee.jpg";
-
 const NorthReg = () => {
     return(
 <Container>
             <Row>
                 <Col md={6}>
                     <Card style={{ width: '18rem' }} className="mb=3">
-                    <Image src={beaverIsland}
+                    {/* <Image src={beaverIsland}
                         className="card-img-top"
                         alt="Beaver Island"
-                        fluid />
+                        fluid /> */}
                     <Card.Body>
                         <Card.Title><h3>Beaver Island</h3></Card.Title>
                         <Card.Text>
@@ -30,10 +25,10 @@ const NorthReg = () => {
                 </Col>
                 <Col md={6}>
                     <Card style={{ width: '18rem' }} className="mb=3">
-                    <Image src={petosky}
+                    {/* <Image src={petosky}
                         className="card-img-top"
                         alt="Petoksy"
-                        fluid />
+                        fluid /> */}
                     <Card.Body>
                         <Card.Title><h3> Petosky </h3></Card.Title>
                         <Card.Text>
@@ -49,10 +44,10 @@ const NorthReg = () => {
                 </Col>
                 <Col md={6}>
                     <Card style={{ width: '18rem' }} className="mb=3">
-                    <Image src={traverseCity}
+                    {/* <Image src={traverseCity}
                         className="card-img-top"
                         alt="Traverse City"
-                        fluid />
+                        fluid /> */}
                     <Card.Body>
                         <Card.Title><h3>Traverse City</h3></Card.Title>
                         <Card.Text>
@@ -67,10 +62,10 @@ const NorthReg = () => {
                 </Col>
                 <Col md={6}>
                     <Card style={{ width: '18rem' }} className="mb=3">
-                    <Image src={manistee}
+                    {/* <Image src={manistee}
                         className="card-img-top"
                         alt="Manistee"
-                        fluid />
+                        fluid /> */}
                     <Card.Body>
                         <Card.Title><h3> Manistee </h3></Card.Title>
                         <Card.Text>

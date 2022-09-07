@@ -6,11 +6,51 @@ const resolver = {
     Query: {
         me: async (parent, args, context) => {
             if(context.user) {
-                const userData = await User.findOne({_id: context.user_id}).select('-__v-password')
+                const userData = await User.findOne({_id: context.user_id})
+                .select('-__v-password')
+                .populate('posts')
+                .populate('locations')
 
                 return userData;
             }
             throw new AuthenticationError('You are not logged in.')
+        },
+        locations: async (parent, {region, name }) => {
+            const params = {};
+
+            if (region) {
+                params.region = region;
+            }
+
+            if (name) {
+                params.name = {
+                    $regex: name
+                };
+            }
+
+            return await Location.find(params).populate('region')
+        },
+        location: async (parent, { _id }) => {
+            return await Location.findById(_id).populate('region').populate('posts')
+        },
+        users: async () => {
+            return User.find()
+            .select('-__v -password')
+            //.populate('posts')
+            //.populate('comments');
+        },
+        posts: async (parent, {username}) => {
+            const params = username ? { username} : {};
+            return Post.find(params).sort({ createdAt: -1});
+        },
+        post: async (parent, { _id }) => {
+            return Post.findOne({ _id});
+        },
+        user: async (parent, { username }) => {
+            return User.findOne({ username})
+            .select('-__v -password')
+            //.populate('posts')
+            //.populate('comments')
         }
     },
 
@@ -41,7 +81,7 @@ const resolver = {
             if (context.user) {
                 const updateUser = await User.findOneAndUpdate(
                     {_id: context.user_id },
-                    { $push: { savedLocations: locationData} },
+                    { $push: { locations: locationData} },
                     { new: true }
                 );
 

@@ -7,19 +7,30 @@ const typeDefs = gql`
         user(username: String!): User
         posts(username: String): [Post]
         post(_id: ID!): Post
+        locations(region: ID, name: String): [Location]
+        location(_id:ID!): Location
+    }
+
+    type Region {
+        _id: ID
+        name: String
     }
 
     type User {
         _id: ID
         username: String
         email: String
-        savedLocations: [Location]
-        savedComments: [Comment]
+        locations: [Location]
+        posts: [Post]
+        comments: [Comment]
     }
     type Location {
         _id: ID
-        postId: [Post]
-        commentId: [Comment]
+        name: String
+        image: String
+        region: Region
+        description: String
+        posts: [Post]
     }
     type Post {
         _id: ID
@@ -27,7 +38,6 @@ const typeDefs = gql`
         username: String
         createdAt: String
         comments: [Comment]
-        locationId: [Location]
     }
     type Comment {
         _id: ID
@@ -37,13 +47,13 @@ const typeDefs = gql`
     }
     type Mutation {
         login(email: String!, password: String!): Auth
-        addUser(username: String!, email: String, password: String): Auth
+        addUser(username: String!, email: String!, password: String!): Auth
         addPost(postText: String!): Post
-        addComment(commentId: ID!, commentText: String!): Post
-        saveLocation(region: String!, description: String!, image: String!, locationId: String! ): User   
+        addComment(postId: ID!, commentText: String!): Post
+        saveLocation( locationId: ID! ): User   
     }
     type Auth {
-        token: ID!
+        token: ID
         user: User
     }
 `;

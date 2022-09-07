@@ -1,22 +1,16 @@
 import React from "react";
 import { Container, Card, Row, Col, Image } from 'react-bootstrap';
 
-import tahquamenon from "../assets/images/tahquamenonFalls.jpg";
-import isleRoyale from "../assets/images/IsleRoyale.jpg";
-import mackinawCity from "../assets/images/MackinawCity.jpg";
-import mackinacIsland from "../assets/images/MackinacIsland.jpg";
-import saultSteMarie from "../assets/images/SaultSteMarie.jpg";
-
 const UpperReg = () => {
     return(
         <Container>
                     <Row>
                         <Col md={6}>
                             <Card style={{ width: '18rem' }} className="mb=3">
-                            <Image src={tahquamenon}
+                            {/* <Image src={tahquamenon}
                                 className="card-img-top"
                                 alt="Tahquamenon Falls"
-                                fluid />
+                                fluid /> */}
                             <Card.Body>
                                 <Card.Title><h3> Tahquamenon Falls </h3></Card.Title>
                                 <Card.Text>
@@ -32,10 +26,10 @@ const UpperReg = () => {
                         </Col>
                         <Col md={6}>
                             <Card style={{ width: '18rem' }} className="mb=3">
-                            <Image src={isleRoyale}
+                            {/* <Image src={isleRoyale}
                                 className="card-img-top"
                                 alt="Isle Royale"
-                                fluid />
+                                fluid /> */}
                             <Card.Body>
                                 <Card.Title><h3> Isle Royale </h3></Card.Title>
                                 <Card.Text>
@@ -49,10 +43,10 @@ const UpperReg = () => {
                         </Col>
                         <Col md={6}>
                             <Card style={{ width: '18rem' }} className="mb=3">
-                            <Image src={mackinawCity}
+                            {/* <Image src={mackinawCity}
                                 className="card-img-top"
                                 alt="Mackinaw City"
-                                fluid />
+                                fluid /> */}
                             <Card.Body>
                                 <Card.Title><h3>Mackinaw City</h3></Card.Title>
                                 <Card.Text>
@@ -63,10 +57,10 @@ const UpperReg = () => {
                         </Col>
                         <Col md={6}>
                             <Card style={{ width: '18rem' }} className="mb=3">
-                            <Image src={mackinacIsland}
+                            {/* <Image src={mackinacIsland}
                                 className="card-img-top"
                                 alt="Mackinac Island"
-                                fluid />
+                                fluid /> */}
                             <Card.Body>
                                 <Card.Title><h3> Mackinac Island </h3></Card.Title>
                                 <Card.Text>
@@ -81,10 +75,10 @@ const UpperReg = () => {
                         </Col>
                             <Col md={6}>
                             <Card style={{ width: '18rem' }} className="mb=3">
-                            <Image src={saultSteMarie}
+                            {/* <Image src={saultSteMarie}
                                 className="card-img-top"
                                 alt="Sault Ste Marie"
-                                fluid />
+                                fluid /> */}
                             <Card.Body>
                                 <Card.Title><h3> Sault Ste Marie </h3></Card.Title>
                                 <Card.Text>

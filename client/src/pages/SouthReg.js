@@ -2,23 +2,16 @@ import React from "react";
 import { Container, Card, Row, Col, Image } from 'react-bootstrap';
 
 
-import frankenmuth from "../assets/images/Frankenmuth.jpg";
-import bayCity from "../assets/images/BayCity.jpg";
-import detroit from "../assets/images/Detroit.jpg";
-import annArbor from "../assets/images/AnnArbor.jpg";
-import troy from "../assets/images/Troy.jpg";
-
-
 const SouthReg = () => {
     return(
         <Container>
                     <Row>
                         <Col md={6}>
                             <Card style={{ width: '18rem' }} className="mb=3">
-                            <Image src={frankenmuth}
+                            {/* <Image src={frankenmuth}
                                 className="card-img-top"
                                 alt="Frankenmuth"
-                                fluid />
+                                fluid /> */}
                             <Card.Body>
                                 <Card.Title><h3> Frankenmuth</h3></Card.Title>
                                 <Card.Text>
@@ -33,10 +26,10 @@ const SouthReg = () => {
                         </Col>
                         <Col md={6}>
                             <Card style={{ width: '18rem' }} className="mb=3">
-                            <Image src={bayCity}
+                            {/* <Image src={bayCity}
                                 className="card-img-top"
                                 alt="Bay City"
-                                fluid />
+                                fluid /> */}
                             <Card.Body>
                                 <Card.Title><h3> Bay City </h3></Card.Title>
                                 <Card.Text>
@@ -50,10 +43,10 @@ const SouthReg = () => {
                         </Col>
                         <Col md={6}>
                             <Card style={{ width: '18rem' }} className="mb=3">
-                            <Image src={detroit}
+                            {/* <Image src={detroit}
                                 className="card-img-top"
                                 alt="Detroit"
-                                fluid />
+                                fluid /> */}
                             <Card.Body>
                                 <Card.Title><h3>Detroit</h3></Card.Title>
                                 <Card.Text>
@@ -68,10 +61,10 @@ const SouthReg = () => {
                         </Col>
                         <Col md={6}>
                             <Card style={{ width: '18rem' }} className="mb=3">
-                            <Image src={annArbor}
+                            {/* <Image src={annArbor}
                                 className="card-img-top"
                                 alt="Ann Arbor"
-                                fluid />
+                                fluid /> */}
                             <Card.Body>
                                 <Card.Title><h3> Ann Arbor </h3></Card.Title>
                                 <Card.Text>
@@ -85,10 +78,10 @@ const SouthReg = () => {
                         </Col>
                             <Col md={6}>
                             <Card style={{ width: '18rem' }} className="mb=3">
-                            <Image src={troy}
+                            {/* <Image src={troy}
                                 className="card-img-top"
                                 alt="Troy"
-                                fluid />
+                                fluid /> */}
                             <Card.Body>
                                 <Card.Title><h3> Troy </h3></Card.Title>
                                 <Card.Text>
