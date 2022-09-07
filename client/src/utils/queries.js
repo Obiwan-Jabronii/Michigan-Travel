@@ -5,6 +5,17 @@ export const QUERY_USER = gql`
       _id
       username
       email
+      posts {
+        _id
+        postText
+        createdAt
+        comments {
+          _id
+          commentText
+          username
+          createdAt
+        }
+      }
       comments {
         _id
         commentText
@@ -20,14 +31,24 @@ export const QUERY_ME = gql`
       _id
       username
       email
-    }
-    comments {
-      _id
-      commentText
-      createdAt
+      posts {
+        _id
+        postText
+        createdAt
+        comments {
+          _id
+          commentText
+          username
+          createdAt
+        }
+      }
+      comments {
+        _id
+        commentText
+        createdAt
+      }
     }
   }
-}
 `;
 
 export const QUERY_POSTS = gql`
@@ -62,27 +83,62 @@ export const QUERY_POST = gql`
       }
     }
   }
+`;
+
+export const QUERY_LOCATIONS = gql`
+  query getlocations($region: ID) {
+    locations(region: $region) {
+      _id
+      name
+      region {
+        _id
+      }
+      image
+      description
+    }
+  }
 `
 
-export const QUERY_COMMENTS = gql`
-  query comments($username: String) {
-    comments(username: $username) {
+export const QUERY_ALL_LOCATIONS = gql`
+  {
+    locations {
       _id
-      commentText
-      createdAt
-      username
+      name
+      region {
+        _id
+        name
+      }
+      image
+      description
     }
   }
 `;
 
-export const QUERY_COMMENT = gql`
-  query comment($id: ID!) {
-    comment(_id: $id) {
+export const QUERY_LOCATION = gql`
+  query location($id: ID!) {
+    location(_id: $id) {
       _id
-      commentText
-      createdAt
-      username
+      name
+      description
+      region {
+        _id
+        name
+      }
+      image
+      posts {
+        _id
+        username
+        postText
+        comments {
+          _id
+          commentText
+          username
+          createdAt
+        }
+        createdAt
+      }
     }
   }
-`;
+`
+
 

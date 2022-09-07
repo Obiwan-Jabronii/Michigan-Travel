@@ -31,6 +31,7 @@ export const ADD_POST = gql`
       postText
       createdAt
       username
+      commentCount
       comments {
         _id
       }
@@ -39,31 +40,28 @@ export const ADD_POST = gql`
 `
 
 export const ADD_COMMENT = gql`
-  mutation addComment($commentText: String!) {
-    addComment(commentText: $commentText) {
+  mutation addComment($postId: ID!, $commentText: String!) {
+    addComment(postId: $postId, commentText: $commentText) {
       _id
-      commentText
-      createdAt
-      username
+      commentCount
+      reactions {
+        _id
+        commentText
+        createdAt 
+        username
+      }
     }
   }
 `;
-export const UPDATE_USER = gql`
-    mutation updateUser($username: String, $email: String, $password: String) {
-        updateUser(username: $username, email: $email, password: $password) {
-            username
-            email
-            password
-        }
-    }
-`;
 
-export const DELETE_USER = gql`
-    mutation deleteUser($ID: ID!) {
-        deleteUser(_id: $ID) {
-            _id
-            email
-            username
-        }
+export const SAVE_LOCATION = gql`
+  mutation saveLocation($locationId: ID!) {
+    savelocation(locationId: ID!) {
+      _id
+      name
+      region
+      image
+      description
     }
+  }
 `
