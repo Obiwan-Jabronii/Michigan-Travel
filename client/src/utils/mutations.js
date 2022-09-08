@@ -56,7 +56,7 @@ export const ADD_COMMENT = gql`
 
 export const SAVE_LOCATION = gql`
   mutation saveLocation($locationId: ID!) {
-    savelocation(locationId: ID!) {
+    savelocation(locationId: $locationId) {
       _id
       name
       region

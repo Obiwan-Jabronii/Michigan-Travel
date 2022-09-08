@@ -1,3 +1,5 @@
+import { gql } from '@apollo/client';
+
 
 export const QUERY_USER = gql`
   query user($username: String!) {
@@ -100,6 +102,15 @@ export const QUERY_LOCATION = gql`
       }
     }
   }
-`
+`;
+
+export const QUERY_REGIONS = gql`
+  {
+    regions {
+      _id 
+      name
+    }
+  }
+`;
 
 

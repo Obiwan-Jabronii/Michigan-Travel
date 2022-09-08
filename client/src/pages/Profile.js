@@ -21,8 +21,8 @@ function Profile() {
                 {me.locations.map(({ _id, name, image, description }, index) => (
                     <div key={index} className='card'>
                         <Link to={`/locations/${_id}`}>
+                            <h2>{name}</h2>
                             <img alt={name} src={`/images/${image}`} />
-                            <p>{name}</p>
                         </Link>
                         <div>
                             <span>${description}</span>

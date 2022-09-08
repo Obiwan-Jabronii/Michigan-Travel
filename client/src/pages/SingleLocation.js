@@ -36,8 +36,8 @@ function SingleLocation() {
                     <p>
                         {currentLocation.description}
                     </p>
-                    {AuthService.loggedIn() && <PostForm locationId={location._id} />}
-                    {<PostList posts={location.posts} />}
+                    {AuthService.loggedIn() && <PostForm locationId={currentLocation._id} />}
+                    {<PostList posts={currentLocation.posts} />}
                 </div>
             ): null}
         </>

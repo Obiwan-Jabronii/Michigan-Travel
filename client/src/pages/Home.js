@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LocationList from '../components/LocatonList';
+import LocationList from '../components/LocationList';
 import RegionMenu from '../components/RegionMenu';
 
 const Home = () => {
@@ -12,4 +12,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Home; 

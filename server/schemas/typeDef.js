@@ -9,6 +9,7 @@ const typeDefs = gql`
         post(_id: ID!): Post
         locations(region: ID, name: String): [Location]
         location(_id:ID!): Location
+        regions: [Region]
     }
 
     type Region {

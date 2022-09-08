@@ -1,31 +1,13 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_POST } from '../../utils/mutations';
-import { QUERY_ME, QUERY_POSTS } from '../../utils/queries';
 
 const Postform = () => {
     const [postText, setText] = useState('');
     const [characterCount, setCharacterCount] = useState(0);
 
-    const [addPost, { error }] = useMutation(ADD_POST, {
-        update(cache, { data: { addPost } }) {
-            try {
-                const { posts } = cache.readQuery({ query: QUERY_POSTS });
-                cache.writeQuery({
-                    query: QUERY_POSTS,
-                    data: { posts: [addPost, ...posts] },
-                });
-            } catch (e) {
-                console.error(e);
-            }
+    const [addPost, { error }] = useMutation(ADD_POST)
 
-            const { me } = cache.readQuery({ query: QUERY_ME });
-            cache.writeQuery({
-                query: QUERY_ME,
-                data: { me: { ...me, posts: [...me.posts, addPost] }},
-            });
-        },
-    });
 
     const handleChange = (event) => {
         if (event.target.value.length <= 1000) {

@@ -1,4 +1,4 @@
-const { User, Post, Location } = require('../models');
+const { User, Post, Location, Region } = require('../models');
 const { signToken } = require('../utils/auth');
 const { AuthenticationError } = require('apollo-server-express');
 
@@ -49,6 +49,9 @@ const resolver = {
             return User.findOne({ username})
             .select('-__v -password')
             //.populate('posts')
+        },
+        regions: async () => {
+            return await Region.find();
         }
     },
 
