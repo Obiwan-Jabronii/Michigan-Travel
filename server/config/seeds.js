@@ -47,7 +47,7 @@ db.once('open', async () => {
         },
         {
             name: 'Pictured Rocks National Lakeshore ',
-            description: 'as;dlkfjlkasjdflkj',
+            description: 'Sandstone cliffs, beaches, waterfalls, sand dunes, inland lakes, deep forest, and wild shoreline beckon you to visit Pictured Rocks National Lakeshore. The power of Lake Superior shapes the park\'s coastal features and affects every ecosystem, creating a unique landscape to explore. Hiking, camping, sightseeing, and four-season outdoor opportunities abound.',
             image: 'Pictured-Rocks.jpg',
             posts: [
                 {
@@ -60,7 +60,7 @@ db.once('open', async () => {
         },
         {
             name: 'Mackinac Island ',
-            description: 'as;dlkfjlkasjdflkj',
+            description: 'For centuries, visitors have enjoyed this national treasure that\'s home to historic Fort Mackinac, world-famous Mackinac Island fudge and car-free streets full of horse-drawn carriages. This ideal vacation spot is a paradise of exploration with incredible natural landmarks, awe-inspiring sunrises and unforgettable sunsets. There\'s unique shopping, diverse dining and extraordinary nightlife, too.',
             image: 'MackinacIsland.jpg',
             posts: [
                 {
@@ -73,7 +73,7 @@ db.once('open', async () => {
         },
         {
             name: 'Isle Royale National Park',
-            description: 'as;dlkfjlkasjdflkj',
+            description: 'Explore a rugged, isolated island far from our connected communities. Isle Royale offers adventures for backpackers, hikers, boaters, paddlers, and divers. Cross Lake Superior and make a commitment: Become a part of this island, and let it become a part of you. Find peace and refuge in island wilderness – because Isle Royale, in turn, finds refuge in us. Help Isle Royale stay wild.',
             image: 'IsleRoyale.jpg',
             posts: [
                 {
@@ -99,7 +99,7 @@ db.once('open', async () => {
         },
         {
             name: 'Petosky',
-            description: 'as;dlkfjlkasjdflkj',
+            description: 'Whether you want to spend time racing down mountain bike trails or ziplines, teeing off on spectacular greens or leisurely riding or hiking along trails with gorgeous water views, our communities are the perfect fall setting in northern Michigan. Your taste buds will love it here, too as you sip and sample in the Petoskey Wine Region, at local breweries, distilleries and at welcoming restaurants where cuisine of all kinds is served with a smile. ',
             image: 'Petosky.jpg',
             posts: [
                 {
@@ -112,7 +112,7 @@ db.once('open', async () => {
         },
         {
             name: 'Manistee',
-            description: 'as;dlkfjlkasjdflkj',
+            description: 'Visit downtown Manistee, known as the Victorian Port City. Spend time browsing the shopping district, which features everything from unique kitchen products to consignment items to trendy clothing. Then satisfy your hunger at one of Manistee\'s exceptional restaurants. Whatever you\'re craving, you\'ll find a perfect meal at an affordable price in downtown Manistee.',
             image: 'Manistee.jpg',
             posts: [
                 {
@@ -138,7 +138,7 @@ db.once('open', async () => {
         },
         {
             name: 'Beaver Island',
-            description: 'as;dlkfjlkasjdflkj',
+            description: 'The largest island in Lake Michigan, Beaver Island hosts many activities for every nature lover. The year round population is approximately 600 – with a large percentage of Irish descent. Time slows down here, offering a peaceful, relaxed way of life. Tour the Island by bicycle, or bring your car over on the ferry or rent a car to circle the Island in an afternoon.',
             image: 'BeaverIsland.jpg',
             posts: [
                 {
@@ -164,7 +164,7 @@ db.once('open', async () => {
         },
         {
             name: 'Bay City',
-            description: 'as;dlkfjlkasjdflkj',
+            description: 'It\'s time to explore, unsalted. Because, in Bay City, our freshwater playground beckons-and, here, majestic tall ships aren\'t just for daydreaming-they\'re for sailing.',
             image: 'BayCity.jpg',
             posts: [
                 {
@@ -190,7 +190,7 @@ db.once('open', async () => {
         },
         {
             name: 'Ann Arbor',
-            description: 'as;dlkfjlkasjdflkj',
+            description: 'Located in southeast Michigan\'s Lower Peninsula, Ann Arbor lies at the center of a greater collection of communities in Washtenaw County. With so many thriving communities nearby, Ann Arbor has become a cultural melting pot and urban oasis.',
             image: 'AnnArbor.jpg',
             posts: [
                 {
@@ -203,7 +203,7 @@ db.once('open', async () => {
         },
         {
             name: 'Troy Summerset',
-            description: 'as;dlkfjlkasjdflkj',
+            description: 'Somerset Collection is an upscale, luxury, super-regional shopping mall, located in Metro Detroit, in Troy, Michigan with more than 180 specialty stores.',
             image: 'Troy.jpg',
             posts: [
                 {
@@ -216,7 +216,7 @@ db.once('open', async () => {
         },
         {
             name: 'Grand Rapids ',
-            description: 'as;dlkfjlkasjdflkj',
+            description: 'From world-class attractions and outdoor recreation to nationally ranked food and craft beverage scenes – Grand Rapids, Michigan is filled with unexpected surprises. Discover why we\'re America\'s Best Beer City, the nation\'s Craft Beverage Capital and a Top 20 U.S. Foodie City. Get an eyeful of spectacular art and an earful of live music. Explore our endless opportunities for family fun. Make your travel dreams come true in Grand Rapids!',
             image: 'grand-rapids-hero (1).jpg',
             posts: [
                 {
@@ -254,7 +254,7 @@ db.once('open', async () => {
         },
         {
             name: 'Ludington',
-            description: 'as;dlkfjlkasjdflkj',
+            description: 'There are so many Ludington beaches to discover! You\'ll find miles of clean, sandy beaches along Lake Michigan and Hamlin Lake, just minutes from wherever you are in the area.',
             image: 'Ludington.jpg',
             posts: [
                 {
@@ -267,7 +267,7 @@ db.once('open', async () => {
         },
         {
             name: 'Holland',
-            description: 'as;dlkfjlkasjdflkj',
+            description: 'Throughout the history of Holland, the city\'s Dutch heritage has been preserved and celebrated. You\'ll have an opportunity for a true Dutch experience in the spring as millions of tulips bloom throughout the city. You\'ll see it in the Dutch architecture downtown, you\'ll taste it in the Dutch delicacies found in local shops and eateries, and you\'ll experience it at our Dutch attractions and events - like the Dutch Winterfest and the Tulip Time Festival. ',
             image: 'Holland.jpg',
             posts: [
                 {

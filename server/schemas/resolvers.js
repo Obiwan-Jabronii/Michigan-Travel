@@ -6,10 +6,10 @@ const resolver = {
     Query: {
         me: async (parent, args, context) => {
             if(context.user) {
-                const userData = await User.findOne({_id: context.user_id})
+                const userData = await User.findById( context.user._id)
                 .select('-__v-password')
-                .populate('posts')
-                .populate('locations')
+                //.populate('posts')
+                //.populate('locations')
 
                 return userData;
             }
@@ -91,17 +91,15 @@ const resolver = {
 
             throw new AuthenticationError('You need to be logged in!')
         },
-        addPost: async (parent, args, context) => {
+        addPost: async (parent, { locationId, postText }, context) => {
             if(context.user) {
-                const post = await Post.create({ ...args, username: context.user.username });
-
-                await User.findByIdAndUpdate(
-                    {_id: context.user_id},
-                    { $push: {posts: post._id}},
-                    {new: true}
+                const updatedLocation = await Location.findOneAndUpdate(
+                    { _id: locationId },
+                    { $push: { posts: { postText, username: context.user.username } } },
+                    { new: true, runValidators: true}
                 );
 
-                return post
+                return updatedLocation;
             }
 
             throw new AuthenticationError('You must be logged in to post!')

@@ -12,7 +12,9 @@ function LocationCard(location) {
     return (
       <div className="card px-1 py-1">
         <Link to={`/locations/${_id}`}>
-        <p>{name}</p>
+        <div>
+        <h2>{name}</h2>
+        </div>
           <img
             alt={name}
             src={`/images/${image}`}

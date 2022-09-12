@@ -32,8 +32,8 @@ const Postform = () => {
 
     return (
         <div>
-            <p className={`m-0 ${characterCount === 1000 || error ? 'error' : ''}`}>
-                Character Count: {characterCount}/1000
+            <p className={`m-0 ${characterCount === 500 || error ? 'error' : ''}`}>
+                Character Count: {characterCount}/500
                 {error && <span className='ml-2'>Too Many Characters</span>}
             </p>
             <form className='flex-row justify-center justify-space-between' onSubmit={handleFormSubmit}>

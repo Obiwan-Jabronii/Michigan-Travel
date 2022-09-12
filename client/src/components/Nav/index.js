@@ -22,12 +22,12 @@ function Nav() {
     } else {
       return (
         <ul className='flex-row'>
-          <li className='mx-1'>
+          <li className='mx-2'>
             <Link to="/signup">
               Signup
             </Link>
           </li>
-          <li className='mx-1'>
+          <li className='mx-2'>
             <Link to="/login">
               Login
             </Link>
@@ -38,7 +38,7 @@ function Nav() {
   }
 
   return (
-    <header className='flex-row'>
+    <header className='flex-row mx-2'>
       <h1>
         <Link to="/">
           The Michigan Traveler
