@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_POST } from '../../utils/mutations';
 
-const Postform = () => {
+const Postform = ({locationId}) => {
     const [postText, setText] = useState('');
     const [characterCount, setCharacterCount] = useState(0);
 
@@ -18,10 +18,10 @@ const Postform = () => {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-
+        (console.log(postText))
         try {
             await addPost({
-                variables: { postText },
+                variables: { locationId, postText },
             });
             setText('');
             setCharacterCount(0);

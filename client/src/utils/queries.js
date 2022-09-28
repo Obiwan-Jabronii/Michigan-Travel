@@ -64,6 +64,12 @@ export const QUERY_LOCATIONS = gql`
       }
       image
       description
+      posts {
+        _id
+        username
+        postText
+        createdAt
+      }
     }
   }
 `

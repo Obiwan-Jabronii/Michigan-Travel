@@ -1,45 +1,41 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import { QUERY_LOCATIONS } from '../utils/queries';
+import { QUERY_LOCATION } from '../utils/queries';
 import AuthService  from '../utils/auth';
 import PostForm from '../components/PostForm';
 import PostList from '../components/PostList';
 
 
 function SingleLocation() {
-    const { id } = useParams();
+    const { id: locationId } = useParams();
 
-    const [currentLocation, setCurrentLocation ] = useState({});
+    const { loading, data } = useQuery(QUERY_LOCATION, {
+        variables: { id: locationId}
+    });
 
-    const { loading, data } = useQuery(QUERY_LOCATIONS);
+    const location = data?.location || [];
 
-    const locations = data?.locations || [];
-
-    useEffect(() => {
-        if (locations.length) {
-            setCurrentLocation(locations.find((location) => location._id === id));
-        }
-    }, [locations, id]);
+    if (loading) {
+        return <div>Loading...</div>
+    };
 
     return (
         <>
-            {currentLocation ? (
                 <div className='container'>
                     <Link to="/">Back to Locations</Link>
 
-                    <h2>{currentLocation.name}</h2>
+                    <h2>{location.name}</h2>
                     <img
-                        src={`/images/${currentLocation.image}`}
-                        alt={currentLocation.name}
+                        src={`/images/${location.image}`}
+                        alt={location.name}
                     />
                     <p>
-                        {currentLocation.description}
+                        {location.description}
                     </p>
-                    {AuthService.loggedIn() && <PostForm locationId={currentLocation._id} />}
-                    {<PostList posts={currentLocation.posts} />}
+                    {AuthService.loggedIn() && <PostForm locationId={location._id} />}
+                    {<PostList posts={location.posts} />}
                 </div>
-            ): null}
         </>
     );
 }

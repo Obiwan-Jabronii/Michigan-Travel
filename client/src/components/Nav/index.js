@@ -7,13 +7,13 @@ function Nav() {
     if (AuthService.loggedIn()) {
       return (
         <ul className='flex-row'>
-          <li className='mx-1'>
-            <Link to="/profile">
+          <li className='mx-3'>
+            <Link to="/profile" style={{ fontSize: '25px'}}>
               My Profile
             </Link>
           </li>
-          <li className='mx-1'>
-            <a href='/' onClick={() => AuthService.logout()}>
+          <li className='mx-3' >
+            <a href='/' onClick={() => AuthService.logout()} style={{ fontSize: '25px'}}>
               Logout
             </a>  
           </li> 
@@ -22,13 +22,13 @@ function Nav() {
     } else {
       return (
         <ul className='flex-row'>
-          <li className='mx-2'>
-            <Link to="/signup">
+          <li className='mx-3'>
+            <Link to="/signup" style={{ fontSize: '25px'}}>
               Signup
             </Link>
           </li>
-          <li className='mx-2'>
-            <Link to="/login">
+          <li className='mx-3'>
+            <Link to="/login" style={{ fontSize: '25px'}}>
               Login
             </Link>
           </li>

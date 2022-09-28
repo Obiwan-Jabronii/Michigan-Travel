@@ -45,9 +45,14 @@ const resolver = {
         post: async (parent, { _id }) => {
             return Post.findOne({ _id});
         },
-        user: async (parent, { username }) => {
-            return User.findOne({ username})
-            .select('-__v -password')
+        user: async (parent, args, context) => {
+            if (context.user) {
+                const user = await User.findById(context.user._id)
+                .select('-__v -password')
+
+                return user;
+            }
+
             //.populate('posts')
         },
         regions: async () => {
@@ -92,7 +97,8 @@ const resolver = {
             throw new AuthenticationError('You need to be logged in!')
         },
         addPost: async (parent, { locationId, postText }, context) => {
-            if(context.user) {
+            if (context.user) {
+                
                 const updatedLocation = await Location.findOneAndUpdate(
                     { _id: locationId },
                     { $push: { posts: { postText, username: context.user.username } } },
