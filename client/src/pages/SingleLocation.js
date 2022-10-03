@@ -29,8 +29,9 @@ function SingleLocation() {
                     <img
                         src={`/images/${location.image}`}
                         alt={location.name}
+                        style= {{ borderStyle: 'solid', borderColor: 'var(--dark)', borderWidth: '5px'}}
                     />
-                    <p>
+                    <p className='description' >
                         {location.description}
                     </p>
                     {AuthService.loggedIn() && <PostForm locationId={location._id} />}

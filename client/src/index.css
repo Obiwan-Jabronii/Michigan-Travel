@@ -7,18 +7,29 @@
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
+  
 }
 
+body {
+  width: 100%;
+  background-image: url(../public/images/Pictured-Rocks.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+
+
+}
 .container {
   width: 85%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  
 }
 
 .flex-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .card {
@@ -48,7 +59,7 @@ button {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
@@ -66,6 +77,7 @@ h6 {
   margin: 5px 0;
   line-height: 1.25;
   color: var(--tertiary);
+  font-style: oblique;
 }
 
 h1 {
@@ -143,7 +155,6 @@ img:hover {
 }
 
 header {
-  background-image: url(../public/images/tahquamenonFalls.jpg);
   height: 100px;
   opacity: .9;
 }
@@ -151,7 +162,7 @@ header {
 a {
   color: var(--tertiary);
   text-decoration: none;
-  font-weight: bold;
+ 
   font-style: oblique;
 }
 
@@ -161,4 +172,14 @@ a:hover {
 
 button:hover {
   opacity: .8;
+}
+
+.description {
+  background-color: var(--light);
+  margin-top: var(--spacing-two);
+  margin-bottom: var(--spacing-two);
+  border: #232F3E;
+  border-width: 5px;
+  border-style: solid;
+  padding: var(--spacing-one);
 }

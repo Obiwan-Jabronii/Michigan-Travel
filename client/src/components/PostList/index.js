@@ -7,11 +7,11 @@ const PostList = ({ posts }) => {
 
 
     return (
-        <div>
+        <div className='container'>
             {posts &&
             posts.map(post => (
-                <div key={post._id} className='card' style={{ width: '100%' }}>
-                    <p className='card-header'>
+                <div key={post._id} className='card my-2' style={{ width: '80%' }}>
+                    <p className='card-header' style={{ backgroundColor: 'var(--secondary)'}}>
                         {post.username}{' '}posted on {post.createdAt}
                     </p>
                     <div className='card-body'>
