@@ -22,14 +22,13 @@ function SingleLocation() {
 
     return (
         <>
-                <div className='container'>
+                <div className='container singleloc'>
                     <Link to="/">Back to Locations</Link>
 
                     <h2>{location.name}</h2>
                     <img
                         src={`/images/${location.image}`}
                         alt={location.name}
-                        style= {{ borderStyle: 'solid', borderColor: 'var(--dark)', borderWidth: '5px'}}
                     />
                     <p className='description' >
                         {location.description}

@@ -7,7 +7,7 @@ function RegionMenu({ setRegion }) {
     const regions = regionData?.regions || [];
 
     return (
-        <div>
+        <div className='menu'>
             <h2>Choose a Region:</h2>
             {regions.map((item) => (
                 <button

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion';
 
 function LocationCard(location) {
     const {
@@ -10,7 +11,10 @@ function LocationCard(location) {
     } = location;
   
     return (
-      <div className="card px-1 py-1">
+      <motion.div 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      className="card px-1 py-1">
         <Link to={`/locations/${_id}`}>
         <div>
         <h2>{name}</h2>
@@ -23,7 +27,7 @@ function LocationCard(location) {
         <div>
           <p>{description}</p>
         </div>
-      </div>
+      </motion.div>
     );
   }
   

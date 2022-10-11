@@ -12,9 +12,7 @@
 
 body {
   width: 100%;
-  background-image: url(../public/images/Pictured-Rocks.jpg);
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: rgb(212, 239, 249);
 
 
 }
@@ -38,6 +36,48 @@ body {
   width: 50%;
   text-align: center;
   box-shadow: 5px 5px 5px 5px rgb(0, 0, 0, .5);
+}
+
+.jumbotron {
+  margin: auto;
+  width: 100vw;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  background-image: url(../public/images/Pictured-Rocks.jpg);
+  background-size: cover;
+}
+
+.splash {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:150px;
+  margin: auto;
+  color: white;
+  text-align: center;
+}
+
+.title {
+  margin-top: auto;
+}
+
+.navigation {
+  margin-top: auto;
+}
+
+.nav {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.menu {
+  text-align: center;
+  margin: 10px 0 15px 0;
+}
+
+.singleloc {
+  
 }
 
 img {

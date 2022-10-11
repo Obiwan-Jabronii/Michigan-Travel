@@ -38,14 +38,14 @@ function Nav() {
   }
 
   return (
-    <header className='flex-row mx-2'>
-      <h1>
+    <header className='nav'>
+      <h1 className='title'>
         <Link to="/">
           The Michigan Traveler
         </Link>
       </h1>
 
-      <nav>
+      <nav className='navigation'>
         {showNav()}
       </nav>
     </header>

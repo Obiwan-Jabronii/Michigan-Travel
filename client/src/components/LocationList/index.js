@@ -20,7 +20,6 @@ function LocationList({ currentRegion }) {
 
     return (
         <div className='my-2'>
-            <h2>Choose Your Destination:</h2>
             {locations.length ? (
                 <div className='flex-row'>
                     {filterLocations().map((location) => (
